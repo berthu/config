@@ -2,10 +2,10 @@
 destination=$1
 if [ $destination == "local" ];
     then
-    cp ./configs/local/.bashrc ~/.bashrc
+    cp ./local/.bashrc ~/.bashrc
     fi
 if [ $destination == "remote" ];
     then
-    cp ./configs/remote/.bashrc ~/.bashrc
+    cp ./remote/.bashrc ~/.bashrc
     fi
 
