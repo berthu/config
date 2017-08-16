@@ -24,3 +24,6 @@ function fmake {
         mkdir errors logs _pre post
         fi
 }
+
+# zip directory, $1 = x.zip, $2 is directory
+function zdir { zip -r $1 $2; }
