@@ -27,3 +27,5 @@ function fmake {
 
 # zip directory, $1 = x.zip, $2 is directory
 function zdir { zip -r $1 $2; }
+
+function tempftp { python -m pyftpdlib -w; }
