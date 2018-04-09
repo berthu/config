@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cp ./global/.bash_aliases ~/.bash_aliases
-cp ./global/.emacs ~/.emacs
+cp ~/.bash_aliases ./global/.bash_aliases
+cp ~/.emacs ./global/.emacs
 
 # check if in an SSH client
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
@@ -15,11 +15,9 @@ fi
 
 if [ "$SESSION_TYPE" != "remote/ssh" ];
     then
-    cp ./local/.network_aliases ~/.network_aliases
+    cp ~/.network_aliases ./local/.network_aliases
     fi
 if [ "$SESSION_TYPE" == "remote/ssh" ];
     then
-    cp ./remote/.network_aliases ~/.network_aliases
+    cp ~/.network_aliases ./remote/.network_aliases 
     fi
-
-source ~/.bash_aliases

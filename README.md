@@ -11,8 +11,8 @@
          ^^^^      ^^^
 ```
 My config files. Currently contains:
-* `.bashrc`: may need to `source ~/.bashrc` in `./bash_profile`
 
 ## Deployment
-1. `chmod +x deploy.sh`: to make script executable
-2. `./deploy.sh local` or `./deploy.sh remote` to deploy appropriate config files
+- `./deploy.sh` to deploy appropriate config files
+- `./collect.sh` to collect config files
+- Note that remote/local access via SSH will collect different .network_aliases files under directories `local' and `remote'

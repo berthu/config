@@ -1,3 +1,4 @@
+#!/bin/bash
 # SSH addresses
 alias bear="ssh albert_hu@research.haas.berkeley.edu"
 alias wrds="ssh alberthu@wrds-cloud.wharton.upenn.edu"
@@ -29,6 +30,8 @@ function fmake {
 function zdir { zip -r $1 $2; }
 
 function tempftp { python -m pyftpdlib -w; }
+
+function ml { /usr/local/MATLAB/R2018a/bin/matlab ; }
 
 alias ga='git add'
 alias gp='git push'
