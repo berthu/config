@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# configs
 cp ./global/.bash_aliases ~/.bash_aliases
 cp ./global/.emacs ~/.emacs
 cp ./global/.gitconfig ~/.gitconfig
+
+# dirs
+cp -r ./dirs/.emacs.d/bert/ ~/.emacs.d/bert/
 
 # check if in an SSH client
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
