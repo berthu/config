@@ -12,15 +12,10 @@
 ```
 My config files. Currently contains:
 
-## Deployment
-- `./deploy.sh` to deploy appropriate config files
-- `./collect.sh` to collect config files
-- Note that remote/local access via SSH will collect different .network_aliases files under directories `local` and `remote`
+## Python script to deploy files
+- Usage: `python config.py` and follow the prompts.
 
-## Current `global` config files:
-- `.bash_alises`
-- `.emacs`
-- `.gitconfig`
-
-## current directories:
-- `~/.emacs.d/bert/`
+## File directory is a csv file `files.csv`
+- The structure is: repo file/directory, local file/directory, and type
+- Types are: `g` for global file, `f` for global directory, and `l` for local only and `r` for remote only.
+- If terminal does not have python installed, generate bash deployment scripts locally, SFTP this repo onto the target home directory and deploy.

@@ -1,0 +1,5 @@
+./global/.bash_aliases,~/.bash_aliases,g
+./global/.emacs,~/.emacs,g
+./global/.gitconfig,~/.gitconfig,g
+./global/.emacs.d/bert/,~/.emacs.d/bert/,f
+
