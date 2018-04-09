@@ -6,7 +6,7 @@ cp ./global/.emacs ~/.emacs
 cp ./global/.gitconfig ~/.gitconfig
 
 # dirs
-cp -r ./dirs/.emacs.d/bert/ ~/.emacs.d/bert/
+cp -r ./dirs/.emacs.d/bert/ ~/.emacs.d/
 
 # check if in an SSH client
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
