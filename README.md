@@ -21,3 +21,6 @@ My config files. Currently contains:
 - `.bash_alises`
 - `.emacs`
 - `.gitconfig`
+
+## current directories:
+- `~/.emacs.d/bert/`
