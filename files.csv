@@ -2,4 +2,6 @@
 ./global/.emacs,~/.emacs,g
 ./global/.gitconfig,~/.gitconfig,g
 ./global/.emacs.d/bert/,~/.emacs.d/bert/,f
+./remote/.network_aliases,~/.network_aliases,g
+
 

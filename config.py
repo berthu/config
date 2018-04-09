@@ -70,7 +70,21 @@ def deploy():
         subprocess.Popen(args)
         print(arg_string(args))        
     
-
+def generate_bash_script():
+    file = open("./deployment.sh","w")
+    file.write("#!/bin/bash\n")
+    print("#!/bin/bash")
+    for (k,v) in db_dict.items():
+        args = ['cp',k,v]
+        print(arg_string(args))
+        file.write(arg_string(args) + "\n")
+    for (k,v) in db_dict_dirs.items():
+        v_parent = os.path.abspath(v + "..")
+        args = ['cp','-r',k,v_parent]
+        print(arg_string(args))
+        file.write(arg_string(args) + "\n")
+    file.close()
+        
 def collect():
     print("Collection")
     for (k,v) in db_dict.items():
@@ -201,7 +215,8 @@ if __name__ == "__main__":
             print("\n DIFF: Diff files:")
             diff()
         elif ans=="5":
-            print("\n Generate deployment script:")            
+            print("\n Generate deployment script:")
+            generate_bash_script()
         elif ans=="6":
             print("\n Goodbye!")
             ans = False
