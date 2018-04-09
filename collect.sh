@@ -2,6 +2,7 @@
 
 cp ~/.bash_aliases ./global/.bash_aliases
 cp ~/.emacs ./global/.emacs
+cp ~/.gitconfig ./global/.gitconfig
 
 # check if in an SSH client
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then

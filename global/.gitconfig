@@ -1,0 +1,6 @@
+[user]
+	email = alhu2000@gmail.com
+
+[includeIf "gitdir:~/CidiGit"]
+	email = hu.sibo@cidi.ai
+	name = Hu Sibo
