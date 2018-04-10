@@ -128,11 +128,15 @@ def checkdiff(deploy=True):
         
     print("The following files will be overwritten:")
     for (k,v) in db_dict.items():
+        if ~os.path.isfile(v) or ~os.path.isfile(k):
+            continue
         out = check_diff_files(v,k)
         if out != "":
             print(k + arrow_string + v)
-    
+
     for (k,v) in db_dict_dirs.items():
+        if ~os.path.isdir(k) or ~os.path.isdir(v):
+            continue
         k_files = os.listdir(k)
         v_files = os.listdir(v)
         if deploy:
