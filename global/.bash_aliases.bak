@@ -32,8 +32,6 @@ function zdir { zip -r $1 $2; }
 function tempftp { python -m pyftpdlib -w; }
 function ml { /usr/local/MATLAB/R2018a/bin/matlab; }
 function shadowsocks { sslocal -s ~/shadowsocks.json; }
-function emcs { emacs -bg black -fg green $1; }
-function emcsnw { emacs -bg black -fg green -nw $1; }
 
 # directories
 function gh { cd ~/GitHub ; }
