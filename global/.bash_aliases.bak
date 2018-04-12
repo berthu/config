@@ -9,6 +9,7 @@ function todo { more "$1" | grep --color=always "TODO"; }
 alias size_dir='du -cksh *'
 function findf { grep -Ril "$1" $2; }
 export -f findf
+function n { nautilus $1; }
 
 # populate directory with common files
 function fmake {
