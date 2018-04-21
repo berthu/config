@@ -42,3 +42,7 @@
 ;; " expands into csquotes macros (for this to work babel must be loaded after csquotes).
 (setq LaTeX-csquotes-close-quote "}"
       LaTeX-csquotes-open-quote "\\enquote{")
+
+
+;; C tab level
+(setq-default c-basic-offset 1)

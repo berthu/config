@@ -32,6 +32,7 @@ function zdir { zip -r $1 $2; }
 # applications
 function tempftp { python -m pyftpdlib -w; }
 function ml { /usr/local/MATLAB/R2018a/bin/matlab; }
+function mlgl { /usr/local/MATLAB/R2018a/bin/matlab -softwareopengl; }
 function shadowsocks { sslocal -s ~/shadowsocks.json; }
 
 # directories

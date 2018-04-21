@@ -12,3 +12,33 @@
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 (setq markdown-command "pandoc -c ~/.emacs.d/github-pandoc.css --from markdown_github -t html5 --mathjax --highlight-style pygments --standalone")
 
+;;; Brent.Longborough's .emacs
+
+(global-visual-line-mode 1); Proper line wrapping
+(global-hl-line-mode 1); Highlight current row
+(show-paren-mode 1); Matches parentheses and such in every mode
+(set-fringe-mode '(0 . 0)); Disable fringe because I use visual-line-mode
+(set-face-background hl-line-face "#404040"); Same color as greyness in gtk
+(setq inhibit-splash-screen t); Disable splash screen
+(setq visible-bell t); Flashes on error
+(setq calendar-week-start-day 1); Calender should start on Monday
+(add-to-list 'default-frame-alist '(height . 59)); Default frame height.
+
+;;; AUCTeX
+;; Customary Customization, p. 1 and 16 in the manual, and http://www.emacswiki.org/emacs/AUCTeX#toc2
+(setq TeX-parse-self t); Enable parse on load.
+(setq TeX-auto-save t); Enable parse on save.
+(setq-default TeX-master nil)
+
+(setq TeX-PDF-mode t); PDF mode (rather than DVI-mode)
+
+(add-hook 'TeX-mode-hook 'flyspell-mode); Enable Flyspell mode for TeX modes such as AUCTeX. Highlights all misspelled words.
+(add-hook 'emacs-lisp-mode-hook 'flyspell-prog-mode); Enable Flyspell program mode for emacs lisp mode, which highlights all misspelled words in comments and strings.
+(setq ispell-dictionary "english"); Default dictionary. To change do M-x ispell-change-dictionary RET.
+(add-hook 'TeX-mode-hook
+          (lambda () (TeX-fold-mode 1))); Automatically activate TeX-fold-mode.
+(setq LaTeX-babel-hyphen nil); Disable language-specific hyphen insertion.
+
+;; " expands into csquotes macros (for this to work babel must be loaded after csquotes).
+(setq LaTeX-csquotes-close-quote "}"
+      LaTeX-csquotes-open-quote "\\enquote{")
