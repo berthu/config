@@ -46,3 +46,6 @@
 
 ;; C tab level
 (setq-default c-basic-offset 1)
+
+;; Display file name in emacs window title
+(setq frame-title-format "%b")
