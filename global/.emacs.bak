@@ -1,4 +1,7 @@
 ;; background color
+;; (setq custom-file "~/.emacs.d/custom.el")
+;; (load custom-file)
+
 (add-to-list 'default-frame-alist '(foreground-color . "#00FF00"))
 (add-to-list 'default-frame-alist '(background-color . "#171717"))
 
@@ -43,6 +46,10 @@
 (setq LaTeX-csquotes-close-quote "}"
       LaTeX-csquotes-open-quote "\\enquote{")
 
-
 ;; C tab level
 (setq-default c-basic-offset 1)
+
+;; Display file name in emacs window title
+(setq frame-title-format "%b")
+
+

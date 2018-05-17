@@ -38,6 +38,7 @@ function shadowsocks { sslocal -s ~/shadowsocks.json; }
 # directories
 function gh { cd ~/GitHub ; }
 function cidigit { cd ~/CidiGit ; }
+function qproc { ps aux | grep "$1" ; }
 
 # git functions
 alias ga='git add'
