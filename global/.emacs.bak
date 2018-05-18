@@ -52,4 +52,7 @@
 ;; Display file name in emacs window title
 (setq frame-title-format "%b")
 
+;; Autocomplete ;; M-x package-install [ret] auto-complete [ret]
+(ac-config-default)
+
 

@@ -66,3 +66,4 @@ alias t='tail'
 alias h='head'
 alias w='wc -l'
 
+function depbert() { cp bert_apollo_aliases.sh /apollo/ ; }

@@ -3,5 +3,6 @@
 ./global/.gitconfig,~/.gitconfig,g
 ./global/.emacs.d/bert/,~/.emacs.d/bert/,f
 ./remote/.network_aliases,~/.network_aliases,g
+./global/bert_apollo_aliases.sh,~/bert_apollo_aliases.sh,g
 
 
