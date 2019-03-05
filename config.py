@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import subprocess
 import csv
 import os
@@ -128,14 +129,14 @@ def checkdiff(deploy=True):
         
     print("The following files will be overwritten:")
     for (k,v) in db_dict.items():
-        if ~os.path.isfile(v) or ~os.path.isfile(k):
+        if not os.path.isfile(v) or not os.path.isfile(k):
             continue
         out = check_diff_files(v,k)
         if out != "":
             print(k + arrow_string + v)
 
     for (k,v) in db_dict_dirs.items():
-        if ~os.path.isdir(k) or ~os.path.isdir(v):
+        if not os.path.isdir(k) or not os.path.isdir(v):
             continue
         k_files = os.listdir(k)
         v_files = os.listdir(v)
@@ -168,8 +169,11 @@ def diff():
             print(out)
     
     for (k,v) in db_dict_dirs.items():
-        k_files = os.listdir(k)
-        v_files = os.listdir(v)
+        try:
+            k_files = os.listdir(k)
+            v_files = os.listdir(v)
+        except:
+            continue
         if deploy:
             for k_file in k_files:
                 k_file_verbose = k  + k_file
